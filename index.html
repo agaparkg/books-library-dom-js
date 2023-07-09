@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <title>Static Template</title>
+  </head>
+  <body>
+    <div class="container mt-4" id="main-container">
+      <h1 class="display-4 text-center">
+        <div class="card" style="width: 10rem; display: inline-block">
+          <img class="card-img-top" src="./books-img.jpeg" alt="" />
+        </div>
+        Books | <span class="text-primary">Library of DEVs</span>
+      </h1>
+      <div
+        id="navbar-btns"
+        class="btn-group d-flex align-items-center justify-content-center my-4"
+        role="group"
+      ></div>
+      <div class="input-group mb-3">
+        <button class="btn btn-danger" type="button" id="clear-btn">X</button>
+        <input
+          id="search-input"
+          type="text"
+          class="form-control"
+          placeholder="Search a book..."
+        />
+        <button class="btn btn-primary" type="button" id="search-btn">
+          SEARCH
+        </button>
+      </div>
+      <div class="overflow-scroll bg-light" style="height: 500px">
+        <div id="spinner" class="text-center">
+          <div class="spinner-border text-primary m-2"></div>
+          <div>Loading...</div>
+        </div>
+        <table class="table table-bordered table-hover">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Book Image</th>
+              <th>Book Name</th>
+              <th>Author</th>
+              <th>Publish Year</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Each row goes here -->
+
+            <!-- If books array is empty display this -->
+            <!-- <tr>
+              <td colspan="5" class="text-center">No Data Found</td>
+            </tr> -->
+
+            <!-- If not, then display this -->
+            <!-- <tr>
+              <td>1</td>
+              <td>
+                <img
+                  src="https://loremflickr.com/640/480/people"
+                  width="50"
+                  height="50"
+                  alt=""
+                />
+              </td>
+              <td>My Dreams</td>
+              <td>John Doe</td>
+              <td>2003</td>
+              <td class="d-flex align-items-center justify-content-around">
+                <i class="fa fa-heart fs-5 text-danger"></i>
+                <i class="fa fa-archive fs-5"></i>
+              </td>
+            </tr> -->
+          </tbody>
+        </table>
+      </div>
+      <nav class="mt-2">
+        <ul class="pagination">
+          <li class="page-item">
+            <a id="previous" class="page-link" href="#">Previous</a>
+          </li>
+          <li class="page-item">
+            <a id="next" class="page-link" href="#">Next</a>
+          </li>
+          <li class="page-item disabled">
+            <!-- activePage/totalPages -->
+            <a id="previous" class="page-link bg-primary text-white" href="#"
+              ><span id="page-status"></span
+            ></a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
